@@ -40,8 +40,8 @@ async def videoConverter(file: str):
         global Messages
         messg = f"╭「" + "░" * c + "█" + "░" * (11 - c) + "」"
         messg += f"\n├⏳ **Status »** __Running 🏃🏼‍♂️__\n├🕹 **Attempt »** __{tr}__"
-        messg += f"\n├⚙️ **Engine »** __{engine}__\n├💪🏼 **Handler »** __{core}__"
-        messg += f"\n╰🍃 **Time Spent »** __{getTime((datetime.now() - BotTimes.start_time).seconds)}__"
+        messg += f"\n├⚙️**Engine »** __{engine}__\n├💪🏼 **Handler »** __{core}__"
+        messg += f"\n╰🍃**Time Spent »** __{getTime((datetime.now() - BotTimes.start_time).seconds)}__"
         try:
             await MSG.status_msg.edit_text(
                 text=Messages.task_msg + mtext + messg + sysINFO(),
