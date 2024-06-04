@@ -51,7 +51,7 @@ cmd = "git clone https://github.com/v15hnuf6n1x/leecher_colb/setup.sh"
 proc = subprocess.run(cmd, shell=True)
 cmd = "apt update && apt install ffmpeg aria2"
 proc = subprocess.run(cmd, shell=True)
-cmd = "pip3 install -r /content/leecher_colab/requirements.txt"
+cmd = "pip3 install -r /content/leecher_colb/requirements.txt"
 proc = subprocess.run(cmd, shell=True)
 
 credentials = {
@@ -62,14 +62,14 @@ credentials = {
     "DUMP_ID": DUMP_ID,
 }
 
-with open('/content/leecher_colab/credentials.json', 'w') as file:
+with open('/content/leecher_colb/credentials.json', 'w') as file:
     file.write(json.dumps(credentials))
 
 Working = False
 
-if os.path.exists("/content/leecher_colab/my_bot.session"):
-    os.remove("/content/leecher_colab/my_bot.session") # Remove previous bot session
+if os.path.exists("/content/leecher_colb/my_bot.session"):
+    os.remove("/content/leecher_colb/my_bot.session") # Remove previous bot session
     
 print("\rStarting Bot....")
 
-!cd /content/Telegram-Leecher/ && python3 -m colab_leecher #type:ignore
+!cd /content/leecher_colb/ && python3 -m colab_leecher #type:ignore
